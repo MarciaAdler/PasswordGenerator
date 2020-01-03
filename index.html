@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // create an array for each character type
+        var specialCharacters = [" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
+        var numeric = [0, 1, 2, 3, 4, 5 , 6, 7, 8, 9];
+        var alphaLowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+        var alphaUpperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","Q","R","S","T","U","V","W","X","Y","Z"];
+        var characterTypes = ["special", "numeric", "lowercase", "uppercase"];
+        var userSelection = [];
+        // Prompt to ask how many characters in the password
+        var passwordLength = prompt("How many characters do you want your password to be?");
+        
+        // ask to include different types of characters
+        var selectionNumeric = confirm("Press OK to include numeric characters");
+        if(selectionNumeric){
+            userSelection.push(numeric);
+            
+        }
+
+        var selectionSpecial = confirm("Press OK to include special characters");
+        if(selectionSpecial){
+            userSelection.push(specialCharacters);
+            
+        }
+
+        var selectionLowerCase = confirm("Press OK to include lowercase letters");
+        if(selectionLowerCase){
+            userSelection.push(alphaLowerCase);
+        }
+
+        var selectionUpperCase = confirm("Press OK to include Uppercase letters");
+        if(selectionUpperCase){
+            userSelection.push(alphaUpperCase);
+        }
+
+        var generatedPassword = Math.floor(Math.random()* userSelection.length);
+        console.log(generatedPassword);
+        
+    </script>
+    
+</body>
+</html>
