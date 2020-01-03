@@ -9,6 +9,7 @@
 <body>
     
     <script type="text/javascript">
+        function passwordGenerator(){
         // create an array for each character type
         var specialCharacters = [" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
         var numeric = [0, 1, 2, 3, 4, 5 , 6, 7, 8, 9];
@@ -16,35 +17,67 @@
         var alphaUpperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","Q","R","S","T","U","V","W","X","Y","Z"];
         var characterTypes = ["special", "numeric", "lowercase", "uppercase"];
         var userSelection = [];
+        var password = "";
         // Prompt to ask how many characters in the password
         var passwordLength = prompt("How many characters do you want your password to be?");
         
+        parseInt(passwordLength);
+        console.log(parseInt(passwordLength))   
         // ask to include different types of characters
+        // include numeric
         var selectionNumeric = confirm("Press OK to include numeric characters");
         if(selectionNumeric){
-            userSelection.push(numeric);
-            
+            userSelection.push(numeric);   
         }
 
+        // include special characters
         var selectionSpecial = confirm("Press OK to include special characters");
         if(selectionSpecial){
             userSelection.push(specialCharacters);
             
         }
-
+        
+        // include lower case
         var selectionLowerCase = confirm("Press OK to include lowercase letters");
         if(selectionLowerCase){
             userSelection.push(alphaLowerCase);
         }
 
+        // include upper case
         var selectionUpperCase = confirm("Press OK to include Uppercase letters");
         if(selectionUpperCase){
             userSelection.push(alphaUpperCase);
         }
+        console.log(userSelection);
 
-        var generatedPassword = Math.floor(Math.random()* userSelection.length);
-        console.log(generatedPassword);
+        // concatenate values in array in user selection array
+        var flattened = userSelection.flat();
+        console.log(flattened); 
+
+        // run a loop to get random numbers based on password length and user selections
+        console.log(userSelection.length);
+        var randomNumbers
+        for (let i = 0; i < passwordLength; i++){
+            randomNumbers = Math.floor(Math.random()* flattened.length);  
+            
+            console.log("random numbers", randomNumbers)
+
+            // match random numbers to items in array
+            var generated = flattened[randomNumbers];
+            console.log(generated)
+
+            // concatenate random numbers in password;
+            // password equals itself plus the generated value
+            password += generated
+            
+        }
+        // log password in console
+        console.log(password);
         
+        
+        }
+
+        passwordGenerator()
     </script>
     
 </body>
