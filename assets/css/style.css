@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-color:lightgray;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.container {
+    background-color: #fff;
+}
+
+#action{
+    padding-left: 25px;
+    padding-top: 20px;
+ }
+hr {
+    width: 95%;
+}
+
+h3 {
+    font-size: 25px;
+    color: lightgray;
+    text-align: center;
+}
+
+#generate-password {
+    background-color: red;
+    border-color: red;
+    border-radius: 1rem;
+    width: 250px;
+    margin: 10px;
+}
+
+#copy {
+    background-color: #c0c0c0;
+    border-color:#c0c0c0;
+    border-radius: 1rem;
+    width: 250px;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    #copy {
+        margin-left: 130px;
+    }
+}
+footer {
+    background-color: lightgray;
+}
