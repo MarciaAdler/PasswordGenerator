@@ -49,7 +49,16 @@
     // Prompt to ask how many characters in the password
     var passwordLength = prompt("How many characters do you want your password to be?");
     
-    parseInt(passwordLength);
+    
+    
+
+    if(isNaN(passwordLength)){
+        alert("Input invalid. Please type a number")
+        return;
+
+        } else {
+        // turn password length into an integer
+        parseInt(passwordLength);    
     console.log(parseInt(passwordLength))   
     // ask to include different types of characters
     // include numeric
@@ -102,6 +111,7 @@
     // log password in console
     console.log(password);
     document.getElementById("password").innerHTML = password;
+    } 
     }
     // run password generator function
     //passwordGenerator()
