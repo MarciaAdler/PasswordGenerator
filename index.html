@@ -51,69 +51,69 @@
     
     
     
-
+    // validation - to check if input into password length is a number
     if(isNaN(passwordLength)){
         alert("Input invalid. Please type a number")
         return;
-
-        } else if(passwordLength = "0"){
+        // validation to ensure a number greater than zero is entered into password length or cancel is not selected.  if criteria is not met stop the function.
+        } else if(passwordLength == false){
             return;
-        } else {
+        } else if(passwordLength) {
+        
         // turn password length into an integer
         parseInt(passwordLength);    
-    console.log(parseInt(passwordLength))   
-    // ask to include different types of characters
-    // include numeric
-    var selectionNumeric = confirm("Press OK to include numeric characters");
-    if(selectionNumeric){
-        userSelection.push(numeric);   
-    }
-
-    // include special characters
-    var selectionSpecial = confirm("Press OK to include special characters");
-    if(selectionSpecial){
-        userSelection.push(specialCharacters);
-        
-    }
     
-    // include lower case
-    var selectionLowerCase = confirm("Press OK to include lowercase letters");
-    if(selectionLowerCase){
-        userSelection.push(alphaLowerCase);
-    }
+        // ask to include different types of characters
+        // include numeric
+        var selectionNumeric = confirm("Press OK to include numeric characters");
+        if(selectionNumeric){
+            userSelection.push(numeric);   
+        }
 
-    // include upper case
-    var selectionUpperCase = confirm("Press OK to include Uppercase letters");
-    if(selectionUpperCase){
-        userSelection.push(alphaUpperCase);
-    }
-    console.log(userSelection);
+        // include special characters
+        var selectionSpecial = confirm("Press OK to include special characters");
+        if(selectionSpecial){
+            userSelection.push(specialCharacters);
+            
+        }
+    
+        // include lower case
+        var selectionLowerCase = confirm("Press OK to include lowercase letters");
+        if(selectionLowerCase){
+            userSelection.push(alphaLowerCase);
+        }
 
-    // concatenate values in array in user selection array
-    var flattened = userSelection.flat();
-    console.log(flattened); 
+        // include upper case
+        var selectionUpperCase = confirm("Press OK to include Uppercase letters");
+        if(selectionUpperCase){
+            userSelection.push(alphaUpperCase);
+        }
+    
 
-    // run a loop to get random numbers based on password length and user selections
-    console.log(userSelection.length);
-    var randomNumbers
-    for (let i = 0; i < passwordLength; i++){
-        randomNumbers = Math.floor(Math.random()* flattened.length);  
+        // concatenate values in array in user selection to a single array
+        var flattened = userSelection.flat();
         
-        console.log("random numbers", randomNumbers)
+
+        // run a loop to get random numbers based on password length and user selections for number into password length.
+        console.log(userSelection.length);
+        var randomNumbers
+        for (let i = 0; i < passwordLength; i++){
+        randomNumbers = Math.floor(Math.random()* flattened.length);  
 
         // match random numbers to items in array
         var generated = flattened[randomNumbers];
-        console.log(generated)
+        
 
         // concatenate random numbers in password;
         // password equals itself plus the generated value
         password += generated;
         
     }
-    // log password in console
-    console.log(password);
-    document.getElementById("password").innerHTML = password;
-    } 
+        // print password to password generator
+        document.getElementById("password").innerHTML = password;
+    } else{ 
+        return;
+    }
     }
     // run password generator function
     //passwordGenerator()
