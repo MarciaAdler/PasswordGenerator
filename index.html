@@ -15,16 +15,19 @@
             <h1>Password Generator</h1>
         </header>
         <main class="container">
-            <h2 id="action">Generate Password</h2>
+            <h2 id="action">Generate A Password</h2>
             <hr>
             <section id="secure-password">
+                
                 <h3>Your secure password</h3>
 
-                <hr>
-                <button type="button" class="btn btn-primary btn-lg"  id="generate-password">Generate Password</button>
-
-                <button type="button" class="btn btn-primary btn-lg"  id="copy">Copy to clipboard</button>
+                <p id="password"></p>
             </section>
+            <hr>
+            <button onClick="passwordGenerator()" type="button" class="btn btn-primary btn-lg"  id="generate-password">Generate Password</button>
+
+            <button type="button" class="btn btn-primary btn-lg"  id="copy">Copy to clipboard</button>
+
         </main>
         <footer>
 
@@ -93,15 +96,14 @@
 
         // concatenate random numbers in password;
         // password equals itself plus the generated value
-        password += generated
+        password += generated;
         
     }
     // log password in console
     console.log(password);
-    
-    
+    document.getElementById("password").innerHTML = password;
     }
-
+    // run password generator function
     //passwordGenerator()
 </script>
 </html>
