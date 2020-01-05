@@ -24,10 +24,14 @@
                 
             </section>
             <hr>
-            <button onClick="passwordGenerator()" type="button" class="btn btn-primary btn-lg"  id="generate-password">Generate Password</button>
-            
-            <button onClick="copyPassword()" type="button" class="btn btn-primary btn-lg"  id="copy-text">Copy to clipboard</button>
-            
+            <div class="row">
+                <div class="flex-row card-item col-md-6 col-sm-6">
+                    <button onClick="passwordGenerator()" type="button" class="btn btn-primary btn-lg"  id="generate-password">Generate Password</button>
+                </div>
+                <div class="flex-row card-item col-md-6 col-sm-6">
+                    <button onClick="copyPassword()" type="button" class="btn btn-primary btn-lg"  id="copy-text">Copy to Clipboard</button>
+                </div>
+            </div>
 
         </main>
         <footer>
@@ -119,7 +123,7 @@
     }
     // copy password to clipboard 
     function copyPassword(){
-        var copyPw = document.getElementById("pw"); 
+        var copyPw = document.getElementById("pw");
             copyPw.focus();
             copyPw.select(); 
             document.execCommand("copy");

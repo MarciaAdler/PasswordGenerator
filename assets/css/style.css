@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    background-color: lightgray;
 }
 
 .wrapper {
@@ -35,20 +36,15 @@ hr {
     padding-right: 2px;
 }
 
-/* #secure-password {
-     width: 95%;
-     height: 200px;
-     border-style: dashed;
-     color: lightgray;
-     margin-left: 12px;
-     margin-right: 10px;
-     border-width: 2px;
- }*/
+h2 {
+    background-color: #fff;
+}
 
 h3 {
     font-size: 25px;
     color: lightgray;
     text-align: center;
+    background-color: #fff;
 }
 
 #pw {
@@ -61,26 +57,30 @@ h3 {
     margin-right: 10px;
     border-width: 2px;
     font-size: 25px;
+    background-color: #fff;
 }
 
+.card-item {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.button {
+    margin: 0;
+}
 #generate-password {
     background-color: red;
     border-color: red;
     border-radius: 2rem;
     width: 250px;
     height: 60px;
-    margin: 10px;
-   
-
+    
 }
 
-#password {
-    font-size: 60px;
-    text-align: center;
-    margin-top: 30px;
-    width: 95%;
-    border-style: none;
-    
+#secure-password {
+    background-color: #fff;
 }
  
 #copy-text {
@@ -89,23 +89,23 @@ h3 {
     border-radius: 2rem;
     width: 250px;
     height: 60px;
-    margin: 10px;  
+    
 }
 
-@media (min-width: 768px) {
-    #copy-text {
-        margin-left: 120px;
+/*@media (min-width: 768px) {
+    .card-item {
+        text-align: center;
     }
-}
+}*/
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
     #copy-text {
         margin-left: 30%;
     }
     #generate-password{
         margin-left: 8%;
     }
-}
+}*/
 footer {
     background-color: lightgray;
     text-align: center; 
