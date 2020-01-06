@@ -61,9 +61,13 @@
         alert("Input invalid. Please type a number")
         return;
         // validation to ensure a number greater than zero is entered into password length or cancel is not selected.  if criteria is not met stop the function.
-        } else if(passwordLength == false){
+        } else if(passwordLength < 8){
+            alert("Please type a number between 8 and 128");
             return;
-        } else if(passwordLength) {
+        } else if(passwordLength > 128){
+            alert("Please type a number between 8 and 128");
+            return;
+        } else if(passwordLength){
         
         // turn password length into an integer
         parseInt(passwordLength);    
