@@ -18,10 +18,13 @@
             <h2 id="action">Generate A Password</h2>
             <hr>
             <section id="secure-password">
-                
-                <h3>Your secure password</h3>
-                <input type="text" value="" id="pw">
-                
+                <section>
+                    <h3>Your secure password</h3>
+                    <span id="password"></span>
+                    <div style="opacity:0;">  
+                        <input type="text" value="" id="pw">
+                    </div>
+            </section>
             </section>
             <hr>
             <div class="row">
@@ -119,8 +122,8 @@
         
     }
         // print password to password generator and save value to input
-        //document.getElementById("password").innerHTML = password;
-        document.getElementById("pw").value = password;
+        document.getElementById("password").innerHTML = password;
+        // document.getElementById("pw").value = password;
     } else{ 
         return;
     }
@@ -128,11 +131,16 @@
     // copy password to clipboard 
     function copyPassword(){
         var copyPw = document.getElementById("pw");
-            copyPw.focus();
-            copyPw.select(); 
+        
+        console.log(copyPw);
+        copyPw.value = password.innerHTML;
+        console.log(password)
+            //copyPw.focus();
+            copyPw.select();
             document.execCommand("copy");
+            
             alert("Copied the text");
-            copyPw.blur(); 
+            //copyPw.blur(); 
     }
     
      

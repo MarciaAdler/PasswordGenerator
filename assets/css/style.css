@@ -47,7 +47,7 @@ h3 {
     background-color: #fff;
 }
 
-#pw {
+section {
     text-align: center;
     width: 95%;
     height: 200px;
@@ -59,6 +59,7 @@ h3 {
     font-size: 30px;
     background-color: #fff;
 }
+
 
 
 .card-item {
@@ -79,6 +80,7 @@ h3 {
 
 #secure-password {
     background-color: #fff;
+    border-style: none;
 }
  
 #copy-text {
