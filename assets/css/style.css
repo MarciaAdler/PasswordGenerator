@@ -20,7 +20,7 @@ h1 {
 
 .container {
     background-color: #fff;
-    
+    margin-bottom: 20px;
 }
 
 #action{
@@ -42,7 +42,7 @@ h2 {
 
 h3 {
     font-size: 25px;
-    color: lightgray;
+    color: rgb(120, 120, 120);
     text-align: center;
     background-color: #fff;
 }
@@ -52,24 +52,23 @@ h3 {
     width: 95%;
     height: 200px;
     border-style: dashed;
-    color: lightgray;
+    color: rgb(120, 120, 120);
     margin-left: 12px;
     margin-right: 10px;
     border-width: 2px;
-    font-size: 25px;
+    font-size: 30px;
     background-color: #fff;
 }
+
 
 .card-item {
     background-color: #fff;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     text-align: center;
+    
 }
 
-.button {
-    margin: 0;
-}
 #generate-password {
     background-color: red;
     border-color: red;
