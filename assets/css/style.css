@@ -60,7 +60,12 @@ section {
     background-color: #fff;
 }
 
-
+#password {
+    font-size: 20px;
+    word-break: break-all;
+    display: absolute;
+    max-width: 100%;
+}
 
 .card-item {
     background-color: #fff;
@@ -78,10 +83,10 @@ section {
     
 }
 
-#secure-password {
+/*#secure-password {
     background-color: #fff;
     border-style: none;
-}
+}*/
  
 #copy-text {
     background-color: #c0c0c0;
@@ -91,11 +96,7 @@ section {
     height: 60px;
 }
 
-@media (max-width: 767px) {
-    #pw {
-        font-size: 20px;
-    }
-}
+
 
 footer {
     background-color: lightgray;
