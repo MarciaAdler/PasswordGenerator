@@ -6,7 +6,7 @@ As an employee who has access to sensitive information, it is important to use s
 
 It is important to randomly generate passwords that meet the specific criteria for eac source of information, so that iz can create strong passwords that provide greater security.
 
-A password generate will help create different passwords for each source of data, and make sure they are randomly generated so they can not be hacked for unauthorized users to gain access.
+A password generator will help create different passwords for each source of data, and make sure they are unique so they cannot be hacked for unauthorized users to gain access.
 
 Business Context
 
