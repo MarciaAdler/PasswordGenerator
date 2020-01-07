@@ -65,6 +65,7 @@ section {
     word-break: break-all;
     display: absolute;
     max-width: 100%;
+    background-color: #fff;
 }
 
 .card-item {
